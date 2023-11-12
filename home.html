@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body{
+            background-color: black;
+            color:white;
+        }
+       
+        
+        .visual{
+            background:url("homeimg.jpg");
+            height:580px;
+            width:100%
+           
+          
+        }
+        .dropdown-content {
+            display: none;
+            position:absolute;
+            background-color:black;
+            min-width: 120px;
+            padding: 12px 16px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+           
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+           
+            
+        } 
+        .dropdown-content a{
+            margin: 4px;
+            padding:2px;
+            text-decoration: none;
+            color:aqua
+        }  
+        .sign a{
+            background-color:red;
+            color:white;
+            border-radius: 4px;
+            border:2px solid red;
+            text-decoration:none;
+            padding:8px;
+            margin-right: 20px;
+            margin-top:10px;
+            position:relative;
+        }
+       
+       .dropdown span{
+        padding:7px;
+        margin:20px;
+        border-radius: 4px;
+        border:2px solid white;
+        font-size:20px;
+        text-align:center;
+        position:relative;
+       }
+       .topt{
+        padding:14px;
+       }
+       .middle{
+        margin-top:120px;
+       }
+       .middle p{
+        text-align: center;
+        font-size:20px;
+       }
+       .middle h1{
+        text-align: center;
+        font-size:50px;
+       }
+       .middle h3{
+        text-align: center;
+        font-size: 25px;
+       }
+       .forme input{
+       
+        background-color: black;
+        text-align: center;
+        padding:4px;
+        z-index:-3;
+        height:20px;
+        margin-right:3px;
+        
+        
+       }
+       .forme{
+        z-index: -1;
+        text-align: center;
+        color:white;
+        padding:20px;
+       }
+       input[type='email']{
+        width:240px;
+       }
+       input[type='button']{
+        width:100px;
+        height:30px;
+        }
+        .section {
+            background-color:rgb(35,35,35);
+            height:8px;
+            margin:0px;
+            padding:0px;
+        }
+        
+       .two{
+        
+        height:490px;
+        }
+       
+       .col2{
+        float:left;
+        width:50%;
+        }
+
+       .col2 div{
+        margin:20%;
+        vertical-align: middle;
+       }
+
+       .hide {
+            margin-top:23px;
+            margin-left:58px;
+            padding:5px;    
+       }
+
+       .hide video{
+        width:337px;;
+        height:280px;
+       }
+
+       .third{
+        height:490px;
+       }
+
+       .three{
+        float:left;
+        width:50%;
+        margin-top:45px;;
+       }
+
+       .stranger{
+        border: 3px solid rgb(135,135,135);
+        height:130px;
+        width:50%;
+        margin-top:214px;
+        border-radius:8px;
+        margin-left:100px;
+        background-color: black;
+        
+        
+       }
+       .stranger img{
+        height:130px;
+
+       }
+
+       .inside{
+        float:left;
+        width:30px 70px;
+        
+       }
+
+       .inside p{
+        margin:25px;
+       }
+
+       .con{
+        float:left;
+        width:50%;
+       
+       }
+       
+       .four{
+        
+        height:490px;
+       }
+
+       .four div{
+        margin-top:75px;
+        margin-left:40px;
+       }
+
+       .con video{
+        width:280px;
+        height:240px;
+        z-index:-1;
+        transform: translate(0px,0px);
+        position:absolute;
+        margin-left:89px;
+        margin-top:15px;
+       }
+
+       .fifth{
+        width:50%;
+        float:left;
+       }
+
+       
+       .five{
+        height:490px;
+        margin-top:130px;
+       }
+
+       .fifth img{
+        width:450px;
+        height:400px;
+        margin-left:90px;
+       }
+
+       .six{
+        height:790px;
+        margin-top:60px;
+      
+       }
+
+       .six ul{
+        list-style-type: none;
+        margin-left:120px;
+        
+       }
+
+       .six li{
+        
+        height:75px;
+        background:rgb(45,45,45);
+        margin:8px;
+        width:85%;
+        text-align:left;
+        vertical-align: middle;
+        padding:18px;
+        font-size:25px;
+        box-sizing: border-box;
+       }
+
+       .six h1{
+        text-align:center;
+        font-size:50px;
+       }
+
+       .listo{
+        align-items: center;
+       }
+
+       .listo span{
+        float:right;
+        font-size:40px;
+       }
+      
+       .a1{
+        position:relative;
+        
+       }
+
+       .a2{
+        visibility: hidden;
+         background-color:rgb(102, 110, 203);
+         color:white;
+         position: absolute;
+         z-index: 1;
+         top:40px;
+         left:15px;
+         height:60px;
+         width:100%;
+         overflow:visible;
+        }
+       
+       .a1:hover .a2{
+        visibility:visible;
+        width:100%;
+        font-size:15px;
+        }
+       
+        .last{
+            height:400px;
+            margin-top:80px;
+        }
+
+        .last .lacol{
+            width:25%;
+            float:left;
+            
+        }
+
+        .lacol li{
+            list-style-type:none;
+            margin:18px;
+            font-size:18px;
+            
+            
+        }
+
+        .lacol a{
+            color:white;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="visual">
+        <div class="topt">
+            <span style="color:red; font-size: 50px; font-weight:bold; margin-left:34px;">NETFLIX</span>
+                <span class=""two" style="float:right;">
+                    <span class="dropdown">
+                        <span>English</span>
+                        <div class="dropdown-content">
+                            <p><a href="https://www.netflix.com/in-hi/">Hindi</a></p>
+                            <p> <a href="#">English</a></p>
+                        </div>
+                    </span>
+                    <span class="sign">
+                        <a href="#">Sign In</a>
+                    </span>
+                </span>
+            </span>
+            <div class="middle">
+                <h1><b>Enjoy big movies, hit series and more</b</h1> 
+                <h1><b>from ₹ 149.</b</h1>
+                <h3>Join today. Cancel anytime.</h3>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                
+                <form class="forme" action="/action_page.php">
+                    <input type="email" id="emailid" name="email" placeholder="Email Address">
+                    <input type="button" value="Get Started" style="background-color: red; color:white; height:30px;">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="section">
+    
+    </div>
+
+    <div class="two">
+        <div class="col2">
+            <div class="invis">
+                <h1>Enjoy on your TV</h1>
+                <h2> Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h2>
+            </div>
+            </div>
+        <div class="col2" style="background-image:url('tv.png'); background-repeat: no-repeat;background-size: contain; width:540px; height:350px; align-content: center; ">
+            <p class="hide">
+                <video data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop=""><source src="video-tv-in-0819.m4v" type="video/mp4"></video>
+            </p>
+        </div>
+    </div>
+    <div class="section">
+    
+    </div>
+    
+    <div class="third">
+        <div class="three" style="background-image:url('mobile-0819.jpg');background-repeat: no-repeat;background-size: contain; width:540px; height:350px; align-content: center; ">
+            <div class="stranger">
+                <div class="inside"><img src="boxshot.png" alt="stranger things"></div>
+                <div class="inside"><p><b>Stranger Things</b></p>
+                <p style="color:blue;">Downloading...</p></div>
+            </div>
+        </div>
+        <div class="three">
+            <div>
+            <h1 style="font-size:60px;"><b>Download your<br>shows to watch<br>offline</b></h1>
+                <h3>Save your favourites easily and always have something to watch.</h3>
+            </div>
+        </div>
+
+        
+
+        
+    </div>
+    
+    <div class="section">
+    
+    </div>
+
+
+    <div class="four">
+        <div class="con">
+            <div class="invisible">
+                <h1 style="font-size:70px;"><b>Watch everywhere</b></h1>
+                <h2 style="font-size:30px;">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h2>
+            </div>
+            </div>
+        <div class="con" style="background-image:url('device-pile-in.png'); background-repeat: no-repeat;background-size: contain; width:540px; height:350px; align-content: center; ">
+            
+                <video data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop=""><source src="video-devices-in.m4v" type="video/mp4"></video>
+            
+        </div>
+    </div>
+
+
+    <div class="section">
+    
+    </div>
+
+
+    <div class="five">
+        <div class="fifth">
+            <img src="children.png" alt="children">
+        </div>
+        <div class="fifth">
+            <p>
+                <h1 style="font-size:55px;"><b>Create profiles for<br>kids</b></h1>
+                <p style="font-size:25px;">Send children on adventures with their favourite characters in a space made just for them free with<br> your membership.</p>
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+    
+    </div>
+
+
+    <div class="six">
+        <h1><b>Frequently Asked Questions</b></h1>
+        <div class="listo">
+            <ul>
+                
+                    <li>
+                        <div class="a1">
+                            What is Netflix?
+                            <span class="a2">
+                                Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+                                You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a1">
+                            How much does Netflix cost?
+                            <span class="a2">
+                                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range<br>from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a1">
+                            Where can I watch?
+                            <span class="a2">
+                                Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                                You can also download your favourite shows with the iOS, Android, or Windows 10 app.
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a1">
+                            How do i cancel?
+                            <span class="a2">
+                                Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a1">
+                            What can i watch on netflix?
+                            <span class="a2">
+                                Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a1">
+                            Is Netflix good for kids?
+                            <span class="a2">
+                                The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+                                Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+                            </span>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </div> 
+    <div class="middle" style="margin-top:0px; transform:translate(0px,-130px);">
+            
+            <p style="font-size:20px;">Ready to watch? Enter your email to create or restart your membership.</p>
+            
+            <form class="forme" action="/action_page.php">
+                <input type="email" id="emailid" name="email" placeholder="Email Address">
+                <input type="button" value="Get Started >" style="background-color: red; color:white; height:30px;">
+            </form>
+    </div>
+
+    <div class="section">
+    
+    </div>
+
+
+
+    <div class="last">
+        <p style="margin-left:60px; font-size:18px;">Questions? Call 000-800-919-1694</p>
+
+        <div class="lacol">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>
+            </ul>
+        </div>
+
+        <div class="lacol">
+            <ul>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>
+             </ul>
+        </div>
+
+        <div class="lacol">
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Ways to Watch</a></li>
+                <li><a href="#">Corporate Information</a> </li>
+                <li><a href="#">Only on Netflix</a></li>
+             </ul>
+        </div>
+
+        <div class="lacol">
+            <ul>
+                <li><a href="#">Media Centre</a> </li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Contact Us</a> </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+      
+    
+
+
+
+    
+    
+</body>
+</html>
